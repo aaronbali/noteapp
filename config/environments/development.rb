@@ -41,4 +41,7 @@ Rails.application.configure do
 
   #needed for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Expands the lines which load the assets
+  config.assets.debug = false #true
 end

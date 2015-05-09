@@ -1,7 +1,11 @@
-- @notes.each do |note|
-	.card.blue-grey.darken-1
-		.card-content.white-text
-		%span= link_to note.title, note, class: "card-title"
-		%p= time_ago_in_words(note.created_at)
-
-= link_to "New Note", new_note_path
+.container
+	-unless @notes.blank?
+		- @notes.each do |note|
+			%a{ href: (url_for [note])}
+				.card.blue-grey.darken-1
+					.card-content.white-text
+						%span.title= link_to note.title, note, class: "card-title"
+						%span.datebadge.white-text.right= time_ago_in_words(note.created_at)
+	- else
+		%h2 You haven't created any notes yet!
+		%button= link_to "New Note", new_note_path						
