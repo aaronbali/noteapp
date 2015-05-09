@@ -6,9 +6,9 @@
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 %body
-	%header.row
+	.row
 		.header_inner
-		%nav.nav-wrapper
+		%nav.nav-wrapper.blue-grey.darken-2
 			%a{ href: (url_for '/')}
 			%ul.left= link_to "Home", root_path, id: "home"
 					

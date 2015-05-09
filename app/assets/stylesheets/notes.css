@@ -13,3 +13,9 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
+.listcard {
+	min-height: 200px;
+	position: relative;
+	margin: 1rem 1%;
+}
