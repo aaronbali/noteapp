@@ -6,8 +6,7 @@
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 %body
-	.row
-		.header_inner
+	.row.headerrow
 		%nav.nav-wrapper.blue-grey.darken-2
 			%a{ href: (url_for '/')}
 			%ul.left= link_to "Home", root_path, id: "home"
@@ -17,9 +16,11 @@
 				%ul.right= link_to "Sign Out", destroy_user_session_path, method: :delete
 			- else
 				%ul.right= link_to "Log In", new_user_session_path
+	- if notice
+		%p.notice= notice
+	- elsif alert
+		%p.alert= alert
 
-	%p.notice= notice
-	%p.alert= alert
 
 	.container
 	= yield

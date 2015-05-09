@@ -1,14 +1,33 @@
-.index-banner.green.accent-3
-	.container
+.index-banner
+	.hero.teal
 		.row.valign-wrapper
-			.col.s12.grid-example
-				%h1.white-text Notely.
-.container.proposition-text	
-	.row.valign-wrapper
-		.col.s12.grid-example
-			%h2.blue-text Never forget a note again.
-			%p.black-text Tired of leaving notes everywhere? Notely securely stores all of your notes in the cloud. 
-			%p Put some shit here about how good everything in the app is
-
-			= link_to "Sign Up!", new_user_registration_path, class: "waves-effect waves-light btn"
-			= link_to "Already a user? Sign in.", new_user_session_path
+			.col.s6.center
+				%h1.white-text Notes
+			.col.s6.left
+				%h4.white-text Never forget a note again.
+				%p.white-text Tired of leaving notes and shit everywhere? This app securely stores all of your notes in the cloud.
+	.proposition.teal.lighten-2			 
+		.row.valign-wrapper
+			.col.s6.center
+				= link_to "Sign Up", new_user_registration_path, class: "waves-effect waves-light btn btn-large pink"
+				%p You'd be an idiot not to. 
+			.col.s6.center
+				= link_to "Sign in.", new_user_session_path, class: "waves-effect waves-light btn btn-large grey"
+				%p Already a user?
+	.benefits.teal.lighten-4	
+		.row
+			.col.s4.center
+				%i.large.mdi-editor-attach-money
+			.col.s4.center
+				%i.large.mdi-editor-format-quote
+			.col.s4.center
+				%i.large.mdi-hardware-phonelink
+			.col.s4.center
+				%h5 Free
+				%p We'll never charge you. 
+			.col.s4.center
+				%h5 Minimal
+				%p Focus on only your notes. Nothing else.
+			.col.s4.center
+				%h5 Cross Platform
+				%p Take notes on your mobile, tablet or desktop.		
