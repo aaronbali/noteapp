@@ -24,7 +24,4 @@ module Noteapp
     config.active_record.raise_in_transactional_callbacks = true
   end
 
-#notes for fonts
-config.assets.enabled = true
-config.assets.paths << "#{Rails.root}/app/assets/font"  
 end

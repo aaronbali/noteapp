@@ -1,0 +1,22 @@
+!!!
+%html
+%head
+	%title Notely | Your online notebook
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+%body
+	%header
+		.header_inner
+		%nav.nav-wrapper
+			%ul.left= link_to "Home", root_path, id: "home"
+			- if user_signed_in?
+				%ul.right= link_to "New Note", new_note_path
+				%ul.right= link_to "Sign Out", destroy_user_session_path, method: :delete
+			- else
+				%ul.right= link_to "Log In", new_user_session_path
+
+	%p.notice= notice
+	%p.alert= alert
+
+	= yield
