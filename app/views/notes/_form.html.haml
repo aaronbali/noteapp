@@ -1,4 +1,7 @@
 = simple_form_for @note do |f|
-	= f.input :title
-	= f.input :content
-	= f.button :submit
+	.input-field
+		= f.input :title
+	.input-field.notecontent
+		= f.input :content	
+	.input-field.center
+		= f.button :submit

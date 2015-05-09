@@ -1,3 +1,15 @@
-// Place all the styles related to the Notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#note_title {
+	font-size: large;
+}
+
+#note_content {
+	border: none;
+	min-height: 300px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

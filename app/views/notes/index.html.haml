@@ -1,11 +1,18 @@
 .container
+	%h1.header Your Notes.
 	-unless @notes.blank?
+		.row
 		- @notes.each do |note|
 			%a{ href: (url_for [note])}
-				.card.blue-grey.darken-1
-					.card-content.white-text
-						%span.title= link_to note.title, note, class: "card-title"
-						%span.datebadge.white-text.right= time_ago_in_words(note.created_at)
+				.card.listcard.blue-grey.darken-1.col.s1
+					.card-content
+						%p.card-title.white-text= note.title
+						%br
+						%h6.orange-text.right= "Last update " + time_ago_in_words(note.updated_at) + " ago"
+		.row
+			.center	
+				%a= link_to "New Note", new_note_path, class: "waves-effect btn-raised btn-large"
+
 	- else
 		%h2 You haven't created any notes yet!
-		%button= link_to "New Note", new_note_path						
+		%a= link_to "New Note", new_note_path, class: "waves-effect btn-floating btn-large"					
