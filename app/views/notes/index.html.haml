@@ -4,11 +4,11 @@
 		.row
 			- @notes.each do |note|
 				%a{ href: (url_for [note])}
-					.listcard.blue-grey.darken-1.col.s5
+					.listcard.pink.darken-1.col.s4
 						.title
-							%h4.card-title.white-text= note.title
+							%h5.card-title.white-text= note.title
 						.updated-time
-							%p.badge.orange-text.bottom= "updated " + time_ago_in_words(note.updated_at) + " ago"
+							%p.badge.black-text= "updated " + time_ago_in_words(note.updated_at) + " ago"
 		.row
 			.center	
 				%a= link_to "New Note", new_note_path, class: "waves-effect btn-raised btn-large"
