@@ -9,7 +9,7 @@
 						%h1.black-text= note.title
 						.metainfo	
 							%p.black-text.center= "updated " + time_ago_in_words(note.updated_at) + " ago"	
-				%p.black-text= note.content	
+				%p.black-text.flow-text= note.content	
 				.divider
 		.row
 			.center	
