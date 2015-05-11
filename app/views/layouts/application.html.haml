@@ -13,8 +13,8 @@
 					
 			- if user_signed_in?
 				%ul.right= link_to "New Note", new_note_path
-				%ul.right= link_to "Blog", "/blog" 
 				%ul.right= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?"}
+				%ul.right= "#{current_user.email}"
 			- else
 				%ul.right= link_to "Log In", new_user_session_path
 	- if notice
