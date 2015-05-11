@@ -17,9 +17,9 @@
 			- else
 				%ul.right= link_to "Log In", new_user_session_path
 	- if notice
-		%p.notice= notice
+		%p.notice.flash.white-text= notice
 	- elsif alert
-		%p.alert= alert
+		%p.alert.flash.white-text= alert
 
 
 	.container

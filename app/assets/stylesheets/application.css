@@ -2,3 +2,22 @@
  *= require_self
  *= require_tree
  */
+
+ .flash {
+ 	height: 5%;
+ 	position: absolute;
+ 	bottom: 5%;
+ 	width: 20%;
+ 	left: 5%;
+ 	background-color: #455a64;
+ 	text-align: center;
+ 	opacity: 0.9;
+ 	z-index: 4;
+ 	padding: 5px;
+ }
+
+ .flash p {
+ 	font-family: 'Roboto';
+  	vertical-align: middle;
+  	text-align: center;
+ }
