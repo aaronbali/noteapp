@@ -40,7 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   #needed for devise
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'notes.aaronba.li', port: 80 }
 
   # Expands the lines which load the assets
   config.assets.debug = false #true
