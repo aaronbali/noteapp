@@ -38,6 +38,10 @@ class NotesController < ApplicationController
 		end		
 	end
 
+	def blog
+		@notes = Note.where(user_id: current_user).order("updated_at DESC")
+	end
+
 	private
 	def note_params
 		params.require(:note).permit(:title, :content)
