@@ -14,6 +14,7 @@ gem 'haml', '~> 4.0.6'
 gem 'devise', '~> 3.4.1'
 gem 'simple_form', '~> 3.1.0'
 gem 'rails_12factor', '~> 0.0.3'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
