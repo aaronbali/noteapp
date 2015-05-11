@@ -1,6 +1,6 @@
 $(function() {
    $('.flash').delay(500).fadeIn('normal', function() {
-      $(this).delay(1000).fadeOut();
+      $(this).delay(500).fadeOut('slow');
    });
 });
 
