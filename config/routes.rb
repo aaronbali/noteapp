@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'welcome/index'
   resources :notes
-
+  get 'welcome/index'
   get 'blog' => 'notes#blog'
 
   authenticated :user do
@@ -10,4 +9,5 @@ Rails.application.routes.draw do
   end
 
   	root 'welcome#index'
+  	
 end

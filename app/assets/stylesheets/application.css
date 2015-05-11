@@ -4,7 +4,6 @@
  */
 
  .flash {
- 	height: 5%;
  	position: absolute;
  	bottom: 5%;
  	width: 20%;
@@ -13,7 +12,7 @@
  	text-align: center;
  	opacity: 0.9;
  	z-index: 4;
- 	padding: 5px;
+ 	padding: 5%;
  }
 
  .flash p {
