@@ -9,14 +9,13 @@
 	.row.headerrow
 		%nav.nav-wrapper.blue-grey.darken-2
 			%a{ href: (url_for '/')}
-			%ul.left= link_to "Home", root_path, id: "home"
+			%ul.left.navlink= link_to "Home", root_path, id: "home"
 					
 			- if user_signed_in?
-				%ul.right= link_to "New Note", new_note_path
-				%ul.right= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?"}
-				%ul.right= "#{current_user.email}"
+				%ul.right.navlink= link_to "New Note", new_note_path
+				%ul.right.navlink= link_to "Sign Out", destroy_user_session_path, method: :delete
 			- else
-				%ul.right= link_to "Log In", new_user_session_path
+				%ul.right.navlink= link_to "Log In", new_user_session_path
 	- if notice
 		%p.notice.flash.white-text= notice
 	- elsif alert

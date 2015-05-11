@@ -40,7 +40,7 @@ class NotesController < ApplicationController
 	end
 
 	def blog
-		@notes = Note.where(user_id: current_user).order("updated_at DESC")
+		@notes = Note.where(user_id: current_user).order("created_at DESC")
 	end
 
 	private
