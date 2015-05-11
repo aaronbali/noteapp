@@ -1,7 +1,7 @@
 .container
 	%h1= @note.title
 	%p.grey-text= "Last updated " + time_ago_in_words(@note.updated_at) + " ago"
-	%p= @note.content
+	%p.flow-text= @note.content
 
 	.row.center
 		= link_to "All Notes", notes_path, class: "waves-effect btn-raised btn"
