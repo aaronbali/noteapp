@@ -4,7 +4,7 @@
 		.row
 			- @notes.each do |note|
 				%a{ href: (url_for [note])}
-					.listcard.pink.darken-1.col.s4
+					.card.listcard.pink.darken-1
 						.title
 							%h5.card-title.white-text= note.title
 						.updated-time

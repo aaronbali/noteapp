@@ -3,7 +3,3 @@ $(function() {
       $(this).delay(2500).fadeOut();
    });
 });
-
-$('.header').click(function() {
-	$(this).fadeOut();	
-});
