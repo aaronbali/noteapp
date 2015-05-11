@@ -1,6 +1,10 @@
 .container
-	%h1 Edit your note
+	.row.center
+		%p Edit your note
 
 	= render 'form'
+	%br
+	.center
+		= link_to "Cancel", note_path, class: "grey-text"
 
-	= link_to "Cancel", note_path
+	

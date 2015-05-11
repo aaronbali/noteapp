@@ -7,3 +7,8 @@ $(function() {
 $('.header').click(function() {
 	$(this).fadeOut();	
 });
+
+$('.listcard').hover(function() {
+	$(this).toggleClass('pink');
+	$(this).toggleClass('teal');
+});
